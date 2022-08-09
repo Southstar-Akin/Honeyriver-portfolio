@@ -1,0 +1,231 @@
+*{
+  font-family: lato;
+}
+@font-face {
+  font-family: lato;
+  src: url(Lato-Regular.ttf);
+}
+@font-face {
+  font-family: refia;
+  src: url(Refia.otf);
+}
+#layout{
+  background-image:
+   linear-gradient(27deg, #f8f1ed 50%,  #523b2e 50%);
+  height: 100vh;
+  width: auto;
+  display: grid;
+  }
+  #inlayout{
+    height: 90vh;
+    width: 90vw;
+    display: grid;
+    place-self: center;
+    background-color: #fefbff;
+    box-shadow: 0px 0px 25px rgba(0 0 0 0.5),
+    inset 0px 0px 1px rgba(0 0 0 0.7);
+    border-radius: 30px;
+    background-image: url('back.png');
+    background-size: 1000px 1000px;
+    background-position: right;
+    background-repeat: none;
+
+  }
+  #header{
+    display: grid;
+   grid-auto-flow: column;
+   grid-template-columns: repeat(17, 1fr);
+   grid-auto-rows: 1fr;
+   height: 80px;   
+  }
+  .l{
+    margin-left: 10px;
+  }
+  #header nav{
+    display: grid;
+    place-content: center;
+    grid-area: 1/2/2/17;
+  }
+  #header nav ul{
+   display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    padding-inline-start: 0px;
+    margin: 16px auto;
+   grid-column-gap: 20px;
+  }
+  #header nav ul li{
+    text-decoration: none;
+    display: inline-block;
+    
+  }
+  #header nav ul a {
+    text-decoration: none;
+    color:rgb(28, 26, 26);
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+  }
+  #header nav ul a:hover{
+    cursor: pointer;
+    background-color: #715240;
+    border-radius: 6px;
+    color: #f8f1ed;
+  }
+  #header nav ul a:active{
+    cursor: pointer;
+    border-bottom: 3px solid #795235;
+  }
+  #header2{
+    display: none;
+  }
+  #about{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    height: 400px;
+    margin: 0px 80px 0px 80px;
+  }
+  .head{
+    display: grid;
+    margin: 20px;
+  }
+  .he{
+    font-size: 1.4em;
+    text-decoration: underline 3px solid #795235;
+    box-sizing: content-box;
+    display: inline;
+    width: 120px;
+  }
+  .info{
+    display: grid;
+    text-indent: 10%;
+  }
+  .skills{
+    margin-left: 20px;
+  }
+  .bottom{
+    text-align: center;
+    font-weight: 100;
+  }
+  @media screen and (max-width: 620px) {
+    #inlayout{
+      height: 80vh;
+      width: 90vw;
+      display: grid;
+      place-self: center;
+      background-color: #fefbff;
+      box-shadow: 0px 0px 25px rgba(0 0 0 0.5),
+      inset 0px 0px 1px rgba(0 0 0 0.7);
+      border-radius: 30px;
+      background-image: url('back.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: none;
+      overflow: auto;
+    }
+     #header{
+     display: none; 
+    }
+    #header2{
+      display: grid;
+    }
+    .menu{
+      display: grid;
+      margin-right: 20px;
+      grid-auto-flow: column;
+    }
+    .me{
+      display: grid;
+      justify-self: end;
+    align-self: center;
+    position: relative;
+    right: 27px;
+    }
+    .lo{
+      display: grid;
+      justify-content: start;
+      position: relative;
+      left: 20px;
+    }
+   nav.nav{
+      display: none;
+      place-content: end;
+      transition: 0.3s all ease;
+      margin-top: -22px;
+    }
+    nav.nav.active{
+      display: grid; 
+    }
+    #header2 nav ul{
+      padding-inline-start: 0px;
+      display: block;
+      background-color:#795235 ;
+      place-content: center;
+      border-radius: 20px;
+    }
+    #header2 nav ul a li{
+      display: grid;
+      list-style: none;
+      color: #f8f1ed;
+      justify-self: center;
+    }
+    #header2 nav ul a{
+      display: grid;
+      justify-self: center;
+      width: 150px;
+      height: 50px;  
+    text-decoration: none;
+    align-items: center;
+    transition: all 0.3s ease;
+    } 
+    #header2 nav ul a:hover{
+      background-color: #39281e;
+      cursor: pointer;
+    }
+    #header2 nav ul a:nth-child(1):hover{
+      border-top-left-radius:20px ;
+      border-top-right-radius:20px;
+    }
+    #header2 nav ul a:nth-child(5):hover{
+      border-bottom-left-radius:20px;
+      border-bottom-right-radius:20px;
+    }
+    #header2 nav ul:before{
+      content: "";
+      position: absolute;
+      transform: translateX(-50%);
+      border:10px solid;
+      border-color: transparent transparent #795235 transparent;
+      z-index: 1;
+      top: 87px;
+      left: 82.5%;
+    }
+    #about{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      height: 400px;
+      margin: 0px 20px 0px 20px;
+    }
+    .head{
+      display: grid;
+      margin: 20px;
+    }
+    .he{
+      font-size: 1.4em;
+      text-decoration: underline 3px solid #795235;
+      box-sizing: content-box;
+      display: inline;
+      width: 120px;
+      margin-bottom: 20px;
+    }
+    .info{
+      display: grid;
+      text-indent: 10%;
+    }
+    .skills{
+      margin-left: 20px;
+    }
+  }
